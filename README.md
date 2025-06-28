@@ -74,13 +74,6 @@ matplotlib
 
 ---
 
-## 📊 Future Enhancements
-
-- Add evaluation/validation metrics on test slices
-- Extend for real observational masking
-- Use transformer-based latent regularization
-
----
 
 ## 📄 Citation
 If you use this code, please consider citing:
