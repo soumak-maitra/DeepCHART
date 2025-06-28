@@ -14,7 +14,7 @@ DeepCHART/
 ├── dataset.py             # Custom PyTorch Dataset class for tau, galaxy, DM
 ├── model.py               # 3D VAE-UNet model with anisotropic kernels
 ├── train.py               # Training pipeline
-└── README.md              # Project description (you are here)
+└── README.md              # Project description
 ```
 
 ---
