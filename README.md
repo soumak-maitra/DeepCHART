@@ -9,12 +9,11 @@ This project implements a 3D tomographic reconstruction pipeline using Ly\(\alph
 ## 📦 Project Structure
 
 ```
-tomography/
+DeepCHART/
 ├── config.py              # Configuration for training, model, and paths
 ├── dataset.py             # Custom PyTorch Dataset class for tau, galaxy, DM
 ├── model.py               # 3D VAE-UNet model with anisotropic kernels
 ├── train.py               # Training pipeline
-├── requirements.txt       # Python dependencies (optional)
 └── README.md              # Project description (you are here)
 ```
 
