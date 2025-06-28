@@ -80,6 +80,3 @@ If you use this code, please consider citing:
 > Maitra et al., *in prep*, 2025
 
 ---
-
-## 📝 License
-Specify your license here (e.g., MIT, GPLv3, etc.).
