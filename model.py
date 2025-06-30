@@ -77,10 +77,10 @@ class VAEUNet3D(nn.Module):
 
         # Decoder
         self.dec3 = UpBlock3D(BASE_CHANNELS * 8, BASE_CHANNELS * 4, kernel_size=k3)
-        self.dec2 = UpBlock3D(BASE_CHANNELS * 4, BASE_CHANNELS * 2, kernel_size=k5)
-        self.dec1 = UpBlock3D(BASE_CHANNELS * 2, BASE_CHANNELS, kernel_size=k7)
+        self.dec2 = UpBlock3D(BASE_CHANNELS * 4, BASE_CHANNELS * 2, kernel_size=k3)
+        self.dec1 = UpBlock3D(BASE_CHANNELS * 2, BASE_CHANNELS, kernel_size=k5)
 
-        self.final = nn.Conv3d(BASE_CHANNELS, OUT_CHANNELS, kernel_size=1)
+        self.final = nn.Conv3d(BASE_CHANNELS, OUT_CHANNELS, kernel_size=k7)
 
     def reparameterize(self, mu, logvar):
         std = torch.exp(0.5 * logvar)
