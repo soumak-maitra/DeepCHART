@@ -80,7 +80,7 @@ class VAEUNet3D(nn.Module):
         self.dec2 = UpBlock3D(BASE_CHANNELS * 4, BASE_CHANNELS * 2, kernel_size=k3)
         self.dec1 = UpBlock3D(BASE_CHANNELS * 2, BASE_CHANNELS, kernel_size=k5)
 
-        self.final = nn.Conv3d(BASE_CHANNELS, OUT_CHANNELS, kernel_size=k7)
+        self.final = nn.Conv3d(BASE_CHANNELS, OUT_CHANNELS, kernel_size=k7, stride=(1, 1, 3), padding=[k // 2 for k in k7])
 
     def reparameterize(self, mu, logvar):
         std = torch.exp(0.5 * logvar)
