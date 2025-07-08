@@ -45,6 +45,7 @@ class VAEUNet3D(nn.Module):
         k7 = (7, 7, 21)
         k5 = (5, 5, 15)
         k3 = (3, 3, 9)
+        k1 = (1, 1, 3)
 
         # Encoder
         self.enc1 = nn.Sequential(
@@ -80,7 +81,7 @@ class VAEUNet3D(nn.Module):
         self.dec2 = UpBlock3D(BASE_CHANNELS * 4, BASE_CHANNELS * 2, kernel_size=k3)
         self.dec1 = UpBlock3D(BASE_CHANNELS * 2, BASE_CHANNELS, kernel_size=k5)
 
-        self.final = nn.Conv3d(BASE_CHANNELS, OUT_CHANNELS, kernel_size=k7, stride=(1, 1, 3), padding=[k // 2 for k in k7])
+        self.final = nn.Conv3d(BASE_CHANNELS, OUT_CHANNELS, kernel_size=k1, stride=(1, 1, 3), padding=[k // 2 for k in k1])
 
     def reparameterize(self, mu, logvar):
         std = torch.exp(0.5 * logvar)
