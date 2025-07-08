@@ -77,6 +77,6 @@ matplotlib
 ## 📄 Citation
 If you use this code, please consider citing:
 
-> Maitra et al., *in prep*, 2025
+> Maitra et al. 2025, DeepCHART: Mapping the 3D dark matter density field from Lyα forest surveys using deep learning, arXiv:2507.00135
 
 ---
